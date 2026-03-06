@@ -1,0 +1,36 @@
+<svg width="1200" height="350" viewBox="0 0 1200 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f12"/>
+      <stop offset="50%" stop-color="#0f0f12"/>
+      <stop offset="100%" stop-color="#0f0f12"/>
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="40" />
+    </filter>
+  </defs>
+  <rect width="1200" height="350" fill="url(#bg)" />
+  <g filter="url(#blur)">
+    <circle cx="200" cy="150" r="120" fill="#851db0">
+      <animate attributeName="cx" dur="18s" values="100;300;150;280;100" repeatCount="indefinite" />
+      <animate attributeName="cy" dur="14s" values="80;200;140;90;80" repeatCount="indefinite" />
+      <animate attributeName="r" dur="12s" values="120;140;110;135;120" repeatCount="indefinite" />
+    </circle>
+    <circle cx="500" cy="200" r="140" fill="#ca0d5a">
+      <animate attributeName="cx" dur="22s" values="400;600;480;580;400" repeatCount="indefinite" />
+      <animate attributeName="cy" dur="16s" values="150;250;180;230;150" repeatCount="indefinite" />
+      <animate attributeName="r" dur="15s" values="140;160;130;150;140" repeatCount="indefinite" />
+    </circle>
+    <circle cx="850" cy="130" r="130" fill="#991a9a">
+      <animate attributeName="cx" dur="20s" values="750;950;820;900;750" repeatCount="indefinite" />
+      <animate attributeName="cy" dur="18s" values="90;180;120;160;90" repeatCount="indefinite" />
+      <animate attributeName="r" dur="13s" values="130;150;120;145;130" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1000" cy="250" r="100" fill="#851db0" opacity="0.7">
+      <animate attributeName="cx" dur="25s" values="950;1100;980;1050;950" repeatCount="indefinite" />
+      <animate attributeName="cy" dur="19s" values="220;280;240;270;220" repeatCount="indefinite" />
+      <animate attributeName="r" dur="14s" values="100;120;90;110;100" repeatCount="indefinite" />
+    </circle>
+  </g>
+ 
+</svg>
