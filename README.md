@@ -1,6 +1,8 @@
 node v20.17.0
 npm install -> npm start
 
+You can find a small demo in the Demo folder
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
