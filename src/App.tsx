@@ -221,10 +221,32 @@ function App() {
     });
   };
   const { cardProps, inputProps, colorProps } = theme;
+  const toolbarRowProps = {
+    justify: "space-between" as const,
+    align: "flex-start" as const,
+    flexWrap: "wrap" as const,
+    gap: 2,
+    w: "100%",
+  };
+  const buttonGroupProps = {
+    gap: 2,
+    flexWrap: "wrap" as const,
+    justify: "flex-end" as const,
+    flexGrow: 1,
+    flexShrink: 1,
+    flexBasis: "0%",
+    minW: "min(100%, 14rem)",
+    maxW: "100%",
+    css: {
+      "& > *": {
+        flexShrink: 0,
+      },
+    },
+  };
 
   return (
-    <Box minH="100vh" bg={colorProps.backgroundColor} py={8}>
-      <Container maxW="80%">
+    <Box minH="100vh" bg={colorProps.backgroundColor} py={{ base: 4, md: 8 }}>
+      <Container maxW="1600px" px={{ base: 2, sm: 3, md: 4 }}>
         <VStack gap={6} align="stretch">
           <Heading
             size="xl"
@@ -235,18 +257,19 @@ function App() {
           >
             Number Converter
           </Heading>
-          <SimpleGrid columns={{ base: 1, md: 2 }} gap={6}>
+          <SimpleGrid columns={{ base: 1, lg: 2 }} gap={{ base: 4, md: 6 }}>
             <Box {...cardProps}>
               <VStack gap={4} align="stretch">
-                <HStack justify="space-between" flexWrap="wrap" gap={2}>
+                <HStack {...toolbarRowProps}>
                   <Text
                     fontSize="sm"
                     fontWeight="500"
                     color={colorProps.textColor}
+                    flexShrink={0}
                   >
                     ASCII
                   </Text>
-                  <HStack gap={2}>
+                  <HStack {...buttonGroupProps}>
                     <Button
                       size="sm"
                       variant={
@@ -349,15 +372,16 @@ function App() {
 
             <Box {...cardProps}>
               <VStack gap={4} align="stretch">
-                <HStack justify="space-between" flexWrap="wrap" gap={2}>
+                <HStack {...toolbarRowProps}>
                   <Text
                     fontSize="sm"
                     fontWeight="500"
                     color={colorProps.textColor}
+                    flexShrink={0}
                   >
                     Hex
                   </Text>
-                  <HStack gap={2} flexWrap="wrap">
+                  <HStack {...buttonGroupProps}>
                     <Button
                       size="sm"
                       variant={state.hexPrefix === "0x" ? "solid" : "outline"}
@@ -485,11 +509,11 @@ function App() {
 
             <Box {...cardProps}>
               <VStack gap={4} align="stretch">
-                <HStack justify="space-between" flexWrap="wrap" gap={2}>
-                  <Text fontSize="sm" fontWeight="500" color="#a1a1aa">
+                <HStack {...toolbarRowProps}>
+                  <Text fontSize="sm" fontWeight="500" color="#a1a1aa" flexShrink={0}>
                     Base64
                   </Text>
-                  <HStack gap={2}>
+                  <HStack {...buttonGroupProps}>
                     <Button
                       size="sm"
                       variant="outline"
@@ -524,15 +548,16 @@ function App() {
 
             <Box {...cardProps}>
               <VStack gap={4} align="stretch">
-                <HStack justify="space-between" flexWrap="wrap" gap={2}>
+                <HStack {...toolbarRowProps}>
                   <Text
                     fontSize="sm"
                     fontWeight="500"
                     color={colorProps.textColor}
+                    flexShrink={0}
                   >
                     Decimal
                   </Text>
-                  <HStack gap={2}>
+                  <HStack {...buttonGroupProps}>
                     <Button
                       size="sm"
                       variant="outline"
@@ -567,15 +592,16 @@ function App() {
 
             <Box {...cardProps}>
               <VStack gap={4} align="stretch">
-                <HStack justify="space-between" flexWrap="wrap" gap={2}>
+                <HStack {...toolbarRowProps}>
                   <Text
                     fontSize="sm"
                     fontWeight="500"
                     color={colorProps.textColor}
+                    flexShrink={0}
                   >
                     Binary
                   </Text>
-                  <HStack gap={2}>
+                  <HStack {...buttonGroupProps}>
                     <Button
                       size="sm"
                       variant="outline"

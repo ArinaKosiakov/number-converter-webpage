@@ -1,10 +1,12 @@
 export const theme = {
   cardProps: {
     bg: "#18181b",
-    p: 6,
+    p: { base: 3, md: 5 },
     borderRadius: "xl",
     borderWidth: "1px",
     borderColor: " #3f3f46",
+    minW: 0,
+    w: "100%",
     _hover: { borderColor: " #52525b" },
   },
 
